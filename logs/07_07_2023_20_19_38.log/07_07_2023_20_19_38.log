@@ -1,0 +1,3 @@
+[ 2023-07-07 20:19:38,503 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2023-07-07 20:19:40,331 ] 25 root - INFO - Data Ingection method starts
+[ 2023-07-07 20:19:40,331 ] 50 root - INFO - Exception occured at Data Ingection Stage

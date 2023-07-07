@@ -1,0 +1,5 @@
+[ 2023-07-07 20:22:45,871 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2023-07-07 20:22:47,622 ] 25 root - INFO - Data Ingection method starts
+[ 2023-07-07 20:22:47,744 ] 29 root - INFO - DataSet Read as Dataframe
+[ 2023-07-07 20:22:48,170 ] 36 root - INFO - train test split
+[ 2023-07-07 20:22:48,609 ] 43 root - INFO - Ingetion of Data is completed
