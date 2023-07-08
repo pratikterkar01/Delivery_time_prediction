@@ -1,9 +1,6 @@
-pandas 
+pandas
 numpy
 matplotlib
 flask
 ipykernel
 scikit-learn
--e .
-
-

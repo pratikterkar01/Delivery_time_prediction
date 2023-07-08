@@ -16,3 +16,12 @@ conda activate "path_of_venv"
 ''' if error occur during running regarding to the ipykernal the run "pip install ipykernal" in cmd to solve it '''
 ##5. code the logger and exception handling
 ##6. in src/components do data ingetion (run the data_ingection file check the output)
+
+
+""coding sequence for project"
+#1. setup.py
+#2. logger.py
+#3. Exception.py
+#4. Utils.py
+#5. data_ingection.py
+#6. Data_tranformation.py
