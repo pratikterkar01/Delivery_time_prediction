@@ -1,0 +1,45 @@
+
+            train_set['Time_Orderd']=train_set["Time_Orderd"].str.replace(":",".")
+            test_set['Time_Orderd']=test_set["Time_Orderd"].str.replace(":",".")
+
+            train_set['Time_Orderd']=train_set['Time_Orderd'].astype('float')
+            test_set['Time_Orderd']=test_set['Time_Orderd'].astype('float')
+
+            train_set['Time_Order_picked']=train_set['Time_Order_picked'].str.replace(':',".")
+            test_set['Time_Order_picked']=test_set['Time_Order_picked'].str.replace(':',".")
+
+            train_set['day']=train_set['Order_Date'].str.split('-').str[0]
+            test_set['day']=test_set['Order_Date'].str.split('-').str[0]
+            train_set['day']=train_set['day'].astype('int')
+            test_set['day']=test_set['day'].astype('int')
+
+            train_set['month']=train_set['Order_Date'].str.split('-').str[1]
+            test_set['month']=test_set['Order_Date'].str.split('-').str[1]
+            train_set['month']=train_set['month'].astype('int')
+            test_set['month']=test_set['month'].astype('int')
+
+            train_set['year']=train_set['Order_Date'].str.split('-').str[2]
+            test_set['year']=test_set['Order_Date'].str.split('-').str[2]
+            train_set['year']=train_set['year'].astype('int')
+            test_set['year']=test_set['year'].astype('int')
+
+          
+            for i in train_set['Time_Order_picked']:
+                string = i
+                second_dot_index = string.find('.', string.find('.') + 1)
+
+                if second_dot_index != -1:
+                    modified_string = string[:second_dot_index] + string[second_dot_index + 1:]
+                    train_set['Time_Order_picked']=modified_string
+                else:
+                    pass
+            for i in test_set['Time_Order_picked']:
+                string = i
+                second_dot_index = string.find('.', string.find('.') + 1)
+
+                if second_dot_index != -1:
+                    modified_string = string[:second_dot_index] + string[second_dot_index + 1:]
+                    test_set['Time_Order_picked']=modified_string
+                else:
+                    pass
+            

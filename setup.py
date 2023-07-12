@@ -1,25 +1,22 @@
 from setuptools import find_packages,setup
 from typing import List
 
-HYPEN_E_DOT='-e .'
-
-def get_requirements(file_path:str)->List[str]:
+HYPHEN_E_DOT="-e ."
+def get_requirment(file_path:str)->List[str]:
     requirments=[]
     with open(file_path) as file_obj:
-        requirments=file_obj.readlines()
-        requirments=[req.replace("\n","")for req in requirments]
+        requirments=file_obj.readline()
+        requirments=[req.replace('\n','') for req in requirments]
 
-        if HYPEN_E_DOT in requirments:
-            requirments.remove(HYPEN_E_DOT)
-
-    return requirments
-
-
+        if HYPHEN_E_DOT in requirments:
+            requirments.remove(HYPHEN_E_DOT)
+    
 setup(
-    name='RegressorProject',
-    version='0.0.1',
-    author='pratik',
+    name="Ml project",
+    version="0.1",
+    author_name="Pratik",
     author_email='pratikterkar@gmail.com',
-    install_requires=get_requirements('requirments.txt'),
-    packages=find_packages()
+    require_install=['pandas','numpy'],
+    pacakges=find_packages()
+
 )

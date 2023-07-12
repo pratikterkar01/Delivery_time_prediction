@@ -19,7 +19,10 @@ conda activate "path_of_venv"
 
 
 ""coding sequence for project"
+
 #1. setup.py
+#after creating setup.py file then install it
+
 #2. logger.py
 #3. Exception.py
 #4. Utils.py
