@@ -31,7 +31,7 @@ class DataIngection:
             os.makedirs(os.path.dirname(self.ingection_config.raw_data_path),exist_ok=True)
             df.to_csv(self.ingection_config.raw_data_path,index=False)
 
-            logging.info(f"Train Dataframe Head : \n{df.info()}")
+            
 
             logging.info('Train Test Split')
             train_set,test_set=train_test_split(df,test_size=0.30,random_state=40)
@@ -45,9 +45,7 @@ class DataIngection:
             train_set.to_csv(self.ingection_config.train_data_path,index=False,header=True)
             test_set.to_csv(self.ingection_config.test_data_path,index=False,header=True)
             
-            logging.info(f'train data set :\n{train_set.head().to_string()}')
-            logging.info(f'test data set  :\n{test_set.head().to_string()}')
-            logging.info("ingection of Data completed")
+           
 
             return(
                 self.ingection_config.train_data_path,
@@ -59,9 +57,5 @@ class DataIngection:
             raise CustomException(e,sys)
 
 
-if __name__=="__main__":
-        obj=DataIngection()
-        train_data_path,test_data_path=obj.initiate_data_ingection()
-        data_transformation=DataTransformation()
-        train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data_path,test_data_path)
+
     

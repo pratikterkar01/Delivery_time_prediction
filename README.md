@@ -27,4 +27,7 @@ conda activate "path_of_venv"
 #3. Exception.py
 #4. Utils.py
 #5. data_ingection.py
-#6. Data_tranformation.py
+#6. Data_tranformation.py = (all feature engg data cleaning do in this file)
+#7.Modeltraniner.py
+#8.delete thr __name__=="__main__" part from the data_ingection file and paste into traning pipeline and run the traning pipeline file
+
