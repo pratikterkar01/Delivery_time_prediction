@@ -14,9 +14,9 @@ def get_requirment(file_path:str)->List[str]:
 setup(
     name="Ml project",
     version="0.1",
-    author_name="Pratik",
+    author="Pratik",
     author_email='pratikterkar@gmail.com',
-    require_install=['pandas','numpy'],
-    pacakges=find_packages()
+    install_requires=get_requirment('requirments.txt'),
+    packages=find_packages()
 
 )
